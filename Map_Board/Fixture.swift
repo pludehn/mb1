@@ -22,8 +22,7 @@ class Fixture: SKSpriteNode {
             let location = touch.location(in: self)
             let node : SKNode = self.atPoint(location)
             if node.name == "myNodeName" {
-                self.lastPosX = self.position.x
-                self.lastPosY = self.position.y
+
             }
         }
     }
@@ -32,7 +31,7 @@ class Fixture: SKSpriteNode {
             let location = touch.location(in: self)
             let node : SKNode = self.atPoint(location)
             if node.name == "myNodeName" {
-                self.position.x = touch.location(in: nil).x
+                self.position = touch.location(in: self)
             }
         }
     }
